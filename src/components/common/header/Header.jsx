@@ -19,22 +19,22 @@ const Header = () => {
                 <Link to="/">Home</Link>
               </li>
               <li>
-                <Link to="/culture">Culture</Link>
+                <Link to="/">Culture</Link>
               </li>
               <li>
-                <Link to="/politics">Politics</Link>
+                <Link to="/">Politics</Link>
               </li>
               <li>
-                <Link to="/memes">Memes</Link>
+                <Link to="/">Memes</Link>
               </li>
               <li>
-                <Link to="/sports">Sports</Link>
+                <Link to="/">Sports</Link>
               </li>
               <li>
-                <Link to="/boxed">Boxed</Link>
+                <Link to="/">Boxed</Link>
               </li>
               <li>
-                <Link to="/reviews">Reviews</Link>
+                <Link to="/">Reviews</Link>
               </li>
             </ul>
             <button className="barIco" onClick={() => setnavbar(!navbar)}>

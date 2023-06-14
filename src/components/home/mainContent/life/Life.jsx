@@ -1,42 +1,36 @@
-import "./popular.css";
-import { popular } from "../../../../dummyData";
-import Heading from "../../../common/Heading/Heading";
 import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import { lifestyle } from "../../../../dummyData";
+import Heading from "../../../common/heading/Heading";
 
-const Popular = () => {
+import "../Ppost/ppost.css";
+const Life = () => {
   const settings = {
-    className: "center",
-    centerMode: false,
+    dots: false,
     infinite: true,
-    centerPadding: "0",
-    slidesToShow: 2,
     speed: 500,
-    rows: 4,
-    slidesPerRow: 1,
+    slidesToShow: 3,
+    slidesToScroll: 1,
     responsive: [
       {
         breakpoint: 800,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 2,
           slidesToScroll: 1,
-          rows: 4,
         },
       },
     ],
   };
   return (
     <>
-      <section className="popular">
-        <Heading title="Popular" />
+      <section className="popularPost life">
+        <Heading title="Life Style" />
         <div className="content">
           <Slider {...settings}>
-            {popular.map((val, index) => {
+            {lifestyle.map((val, index) => {
               return (
                 <div key={index} className="items">
                   <div className="box shadow">
-                    <div className="images row">
+                    <div className="images">
                       <div className="img">
                         <img src={val.cover} alt="" />
                       </div>
@@ -44,15 +38,11 @@ const Popular = () => {
                         <span>{val.category}</span>
                       </div>
                     </div>
-                    <div className="text row">
+                    <div className="text">
                       <h1 className="title">{val.title.slice(0, 40)}...</h1>
                       <div className="date">
                         <i className="fas fa-calendar-days"></i>
                         <label>{val.date}</label>
-                      </div>
-                      <div className="comment">
-                        <i className="fas fa-comments"></i>
-                        <label>{val.comments}</label>
                       </div>
                     </div>
                   </div>
@@ -66,4 +56,4 @@ const Popular = () => {
   );
 };
 
-export default Popular;
+export default Life;
