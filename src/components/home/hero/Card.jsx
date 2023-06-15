@@ -12,7 +12,6 @@ const Card = ({ item }) => {
           <Link to={`/SinglePage/${item.id}`}>
             <h1 className="titleBg">{item.title}</h1>
           </Link>
-          <h1 className="titleBg">{item.title}</h1>
           <div className="author flex">
             <span>by {item.authorName}</span>
             <span>{item.time}</span>
